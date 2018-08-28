@@ -39,7 +39,5 @@ ADD files/run.sh /usr/local/bin/run
 
 RUN chmod +x /usr/local/bin/run
 
-EXPOSE 9000
-
 ENTRYPOINT ["run"]
 
