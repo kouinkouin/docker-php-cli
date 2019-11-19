@@ -35,9 +35,7 @@ RUN \
     apt-get clean && \
     rm -r /var/lib/apt/lists/*
 
-ADD files/composer-setup.php /tmp/composer-setup.php
-
-RUN php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer && rm /tmp/composer-setup.php
+RUN wget -q https://getcomposer.org/installer -O /tmp/composer-setup.php && php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer && rm /tmp/composer-setup.php
 
 ADD files/run.sh /usr/local/bin/run
 
