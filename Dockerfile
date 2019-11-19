@@ -9,7 +9,7 @@ RUN wget -qO /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gp
 ENV PHP_VERSION=$PHP_VERSION UID=33 GID=33
 
 RUN \
-    apt install -y \
+    apt-get install -y \
         php${PHP_VERSION}-cli \
         php${PHP_VERSION}-bcmath \
         php${PHP_VERSION}-bz2 \
@@ -32,7 +32,7 @@ RUN \
         gettext \
         zip \
         && \
-    apt clean && \
+    apt-get clean && \
     rm -r /var/lib/apt/lists/*
 
 ADD files/composer-setup.php /tmp/composer-setup.php
