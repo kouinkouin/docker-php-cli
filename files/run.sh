@@ -5,5 +5,5 @@ set -e
 
 mkdir -p /var/www && chown -R www-data. /var/www
 
-exec sudo -u www-data $@
+exec sudo -E -u www-data $@
 
