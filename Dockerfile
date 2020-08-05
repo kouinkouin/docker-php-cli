@@ -10,6 +10,7 @@ RUN wget -qO /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gp
 
 RUN \
     apt-get install -y \
+        php-amqp \
         php${PHP_VERSION}-cli \
         php${PHP_VERSION}-bcmath \
         php${PHP_VERSION}-bz2 \
