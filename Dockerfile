@@ -18,6 +18,7 @@ RUN \
         php${PHP_VERSION}-gd \
         php${PHP_VERSION}-intl \
         php${PHP_VERSION}-json \
+        php-mail \
         php${PHP_VERSION}-mbstring \
         php${PHP_VERSION}-memcached \
         php${PHP_VERSION}-mysql \
